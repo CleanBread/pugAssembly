@@ -1,0 +1,886 @@
+.absolut-page-content
+  font-family: Roboto, sans-serif
+  color: #404040
+  overflow: hidden
+  .container
+    max-width: 100%
+    @media (min-width: 1200px) 
+      width: 1200px
+    &::before, &::after
+      display: none
+  .row
+    &::before, &::after
+      display: none
+
++rmin($md)
+  .animated
+    transition: 0.5s
+    transition-delay: 0.2s
+    transition-property: opacity, transform
+    opacity: 0
+    &.in-view
+      opacity: 1
+      
+.abs-btn
+  min-height: 47px
+  width: 370px
+  border: none
+  max-width: 100%
+  background: #D62C27
+  color: #FFFFFF
+  display: inline-block
+  text-decoration: none
+  text-align: center
+  cursor: pointer
+  transition: all 0.3s ease	
+  max-width: 100%
+  line-height: 1
+  padding: 15px 15px 15px
+  font-size: 18px
+  font-weight: 400
+  transition: 0.3s
+  text-decoration: none
+  img
+    display: inline-block
+    vertical-align: middle
+  span
+    display: inline-block
+    vertical-align: middle
+  &:hover,
+  &:focus
+    background-color: #A1ABDA
+    border-color: #A1ABDA
+    color: #26296B
+    text-decoration: none
+    outline: 0
+  +r($sm)
+    font-size: 16px
+    padding-left: 5px
+    padding-right: 5px
+
+.s-abs
+  padding: 155px 0 170px
+  +r($xl)
+    padding: 100px 0
+  +r($md)
+    padding: 90px 0
+
+.abs-title
+  color: #26296b
+  font-size: 42px
+  font-weight: 700
+  margin: 0 0 130px
+  line-height: 1.17
+  text-align: center
+  +r($xl)
+    margin-bottom: 70px
+  +r($md)
+    margin-bottom: 60px
+    font-size: 38px
+
+.abs-subtitle
+  color: #26296b
+  font-size: 24px
+  font-weight: 700
+  line-height: 1.17
+
+.abs-section-descr
+  font-size: 18px
+  line-height: 1.8
+  font-weight: 300
+  max-width: 570px
+  margin: 0 auto 130px
+  text-align: center
+  +r($xl)
+    margin-bottom: 65px
+
+
+.visually-hidden
+  position: absolute
+  clip: rect(0 0 0 0)
+  width: 1px
+  height: 1px
+  margin: -1px
+
+.s-abs-top 
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  color: #ffffff
+  padding: 150px 0 135px
+  min-height: calc(100vh - 150px)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  
+  +r($xl)
+    padding: 100px 0
+  +r($md)
+    padding: 120px 0
+  &__box
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    +r($xl)
+      flex-direction: column
+      width: 484px
+      max-width: 100%
+      margin: 0 auto
+      
+  &__primary-descr
+    width: 470px
+    max-width: 100%
+    +rmin($md)
+      &.animated
+        transform: translateY(40px)
+        &.in-view
+          transform: none
+    +r($xl)
+      width: 100%
+      margin: 0 auto
+      text-align: center
+  &__secondary-descr
+    width: 540px
+    max-width: 100%
+    padding-top: 82px
+    +r($xl)
+      width: 100%
+      margin: 0 auto
+      padding-top: 150px
+    +r($md)
+      padding-top: 115px
+  &__title 
+    font-size: 42px
+    line-height: 1.17
+    font-weight: 700
+    margin: 0 0 32px
+    +r($md)
+      font-size: 38px
+      margin-bottom: 35px
+  &__text
+    font-size: 18px
+    margin-bottom: 45px
+    +r($md)
+      margin-bottom: 59px
+  &__about
+    display: flex
+    +r($xl)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      text-align: center
+    +rmin($md)
+      &.animated
+        transform: translateY(40px)
+        transition-delay: 0.4s
+        &.in-view
+          transform: none
+    &-icon
+      padding-right: 17px
+      width: 67px
+      +r($xl)
+        width: 50px
+        padding-right: 0
+        margin-bottom: 30px
+      &-img
+        max-width: 100%
+    &-txt
+      font-size: 18px
+      line-height: 1.8
+      font-weight: 300
+      flex: 1
+      
+
+
+
+
+.s-abs-feautures
+  background: #26296B
+  color: #ffffff
+  padding: 74px 0
+  
+  // edge fix
+  position: relative
+  bottom: 2px
+  +r($xl)
+    padding-top: 100px
+    padding-bottom: 24px
+  +r($sm)
+    padding-bottom: 21px
+  &__box 
+    display: flex
+    justify-content: space-between
+    +r($xl)
+      flex-wrap: wrap
+  &__item
+    padding-right: 45px
+    display: flex
+    align-items: flex-start
+    +rmin($md)
+      &.animated
+        transform: translateY(50px)
+        transition-duration: 0.8s
+        &.in-view
+          transform: none
+    +r($xl)
+      width: 50%
+      padding: 0 60px 
+      margin-bottom: 80px
+    +r($md)
+      padding: 0 20px
+    +r($sm)
+      width: 100%
+      padding: 0
+      padding-left: 22px
+    
+
+    &-icon
+      min-width: 70px
+    &-text
+      flex: 1
+      font-size: 18px
+      line-height: 1.17
+
+.s-abs-about
+  &__box 
+    display: flex
+    align-items: center
+    +r($lg)
+      flex-direction: column
+  &__descr
+    width: 50%
+    padding-right: 15px
+    +r($lg)
+      width: 100%
+      max-width: 546px
+      padding-right: 0
+      align-self: flex-start
+  &__logo
+    flex: 1
+    text-align: center
+    padding-left: 160px
+    +rmin($md)
+      &.animated
+        transform: translateX(100%)
+        transition-duration: 1s
+        transition-delay: 0.5s
+        &.in-view
+          transform: none
+    &-img
+      max-width: 100%
+      width: 320px
+      +r($lg)
+        width: 224px
+    +r($lg)
+      order: -1
+      padding-left: 0
+      margin-bottom: 85px
+
+  &__item
+    margin-bottom: 44px
+    +rmin($md)
+      &.animated
+        transform: translateY(20px)
+        &.in-view
+          transform: none
+  &__subtitle
+    margin-bottom: 20px
+  &__letter 
+    +r($md)
+      text-align: center
+  &__letter-link
+    display: inline-block
+    color: #D62C27
+    padding-bottom: 10px
+    font-size: 20px
+    border-bottom: 4px solid currentColor
+    transition: 0.3s
+    &:hover
+      text-decoration: none
+      color: #A1ABDA
+      border-bottom-width: 2px
+
+
+.s-abs-aspects
+  background: #26296B
+  color: #ffffff
+  padding: 85px 0 70px
+  +r($xl)
+    padding-top: 100px
+    padding-bottom: 24px
+  +r($sm)
+    padding-bottom: 21px
+  &__box 
+    display: flex
+    justify-content: space-between
+    +r($xl)
+      flex-wrap: wrap
+  &__item
+    padding-right: 45px
+    text-align: center
+    +rmin($md)
+      &.animated
+        transform: translateY(50px)
+        transition-duration: 0.8s
+        &.in-view
+          transform: none
+    +r($xl)
+      width: 50%
+      padding: 0 60px 
+      margin-bottom: 80px
+    +r($md)
+      padding: 0 20px
+    +r($sm)
+      width: 100%
+      padding: 0
+
+    &-icon
+      margin-bottom: 25px
+      &-img
+        max-width: 100%
+    &-text
+      flex: 1
+      font-size: 20px
+      color: rgba(255, 255, 255, 0.7)
+      line-height: 1.17
+      max-width: 190px
+      margin: 0 auto
+
+
+
+
+.s-abs-guarantees
+  overflow: hidden
+  +r($xl)
+    background: rgba(38, 41, 107, 0.07)
+  &__title 
+    margin-bottom: 55px
+  &__items-box
+    display: flex
+    justify-content: space-between
+    margin-right: -30px
+    padding-bottom: 15px
+    +r($xl)      
+      overflow-x: auto
+    +r($sm)
+      margin-right: 0
+      flex-direction: column
+      margin-bottom: -30px
+  &__items-container
+    +r($xl)
+      width: 100%
+      padding: 0
+
+.guarantees-item
+  width: 370px
+  min-width: 320px
+  max-width: 100%
+  margin-right: 30px
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  font-size: 18px
+  line-height: 1.2
+  font-weight: 300
+  background: #ffffff  
+  +rmin($md)
+    &.animated
+      transform: translateY(100px)
+      transition-duration: 0.8s
+      &:nth-child(3n + 2)
+        transition-delay: 0.5s
+      &:nth-child(3n + 3)
+        transition-delay: 0.8s
+      &.in-view
+        transform: none
+    
+  +r($sm)
+    margin-bottom: 25px
+  &__header
+    text-align: center
+    min-height: 100px
+    padding: 26px 40px 0
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    +r($xl)
+      padding: 26px 20px 0
+  &__subtitle
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 1.2em
+    color: #26296B
+  &__money
+    margin-bottom: 1.2em
+    &-sum
+      font-weight: 500
+  &__title 
+
+  &__body
+    padding: 30px 50px 23px 50px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  &__terms
+    margin-bottom: 0.7em
+  &__terms-for
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.4
+    padding-top: 10px
+    padding-left: 10px
+  &__footer
+    padding: 25px 50px 34px 50px
+    
+
+
+
+.s-abs-benefits
+  +bg
+  background-attachment: fixed
+  color: #ffffff
+  &__title
+    color: #ffffff
+    max-width: 650px
+    margin-left: auto
+    margin-right: auto
+  &__box
+    display: flex
+    flex-wrap: wrap
+    +r($xl)
+      margin-bottom: -56px
+    +r($md)
+      margin-bottom: -95px
+  &__item
+    width: 25%
+    padding: 0 15px
+    text-align: center
+    +rmin($md)
+      &.animated
+        transform: translateY(100px)
+        transition-duration: 0.8s
+        &:nth-child(4n + 3)
+          transition-delay: 0.4s
+        &:nth-child(4n + 2)
+          transition-delay: 0.6s
+        &:nth-child(4n + 1)
+          transition-delay: 0.8s
+        &.in-view
+          transform: none
+    +r($xl)
+      width: 50%
+      margin-bottom: 56px
+    +r($md)
+      width: 100%
+      margin-bottom: 95px
+    &-icon
+      margin-bottom: 33px
+    &-txt
+      font-size: 20px
+      color: rgba(255, 255, 255, 0.7)
+
+
+.s-abs-callback
+  +bg
+  background-attachment: fixed
+  color: #ffffff
+  &__title
+    color: #ffffff
+    margin-bottom: 40px
+  &__descr
+    max-width: 450px
+    margin-left: auto
+    margin-right: auto
+
+
+.abs-checkbox-white
+  cursor: pointer
+  position: relative
+  user-select: none
+  &__input
+    top: 5px
+    left: 5px
+    &:checked + .abs-checkbox-white__content:before
+      background-image: url(../img/svg/checkbox-checked-white.svg)
+      border: none
+  &__content
+    padding-left: 25px
+    min-height: 15px
+    display: inline-block
+    position: relative  
+    vertical-align: middle
+    font-size: 16px
+    font-weight: 300
+    color: #ffffff
+    line-height: 1.8
+    a
+      color: inherit
+      text-decoration: underline
+      &:hover, &:focus
+        opacity: 0.8
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 7px
+      width: 15px
+      height: 15px
+      background-image: url(../img/svg/checkbox-white.svg)
+      background-repeat: no-repeat
+      background-size: contain
+
+
+.abs-callback-form
+  
+  &__fields-row
+    display: flex
+    margin-right: -30px
+    +r($lg)
+      flex-direction: column
+      max-width: 360px
+      margin: 0 auto
+  &__field
+    flex: 1
+    margin-right: 30px
+    +r($lg)
+      margin-right: 0
+      margin-bottom: 15px
+  &__input
+    width: 100%
+    background: transparent
+    border: none
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px
+    font-size: 18px
+    color: #ffffff
+    &:focus
+      border-bottom-color: #ffffff
+    &::placeholder
+      color: rgba(255, 255, 255, 0.7)
+  &__agree
+    padding: 78px 0 43px
+    max-width: 481px
+    margin: 0 auto
+    +r($lg)
+      max-width: 360px
+      padding: 50px 0 40px
+    +r($md)
+      padding: 30px 0 40px
+  &__btn-wrap
+    text-align: center
+
+
+.abs-tabs
+  +r($xl)
+    width: 100%    
+  &__switches
+    display: flex
+    padding: 0 0 90px
+    user-select: none
+    +r($md)
+      padding: 0 0 70px
+      font-size: 14px
+      flex-wrap: wrap
+    &-container
+      +r($xl)
+        width: 100%
+        max-width: 100%
+        text-align: center
+        +rmin($md)
+          padding-left: 0
+          padding-right: 0
+  &__switch
+    font-size: 18px
+    font-weight: 500
+    padding-bottom: 13px
+    color: #B4B4B4
+    cursor: pointer
+    flex: 1
+    position: relative
+    transition: 0.3s
+    +r($xl)
+      padding-left: 10px
+      padding-right: 10px
+    +r($md)
+      font-size: 16px
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 1px
+      background: currentColor
+      transition: 0.3s
+    &:hover
+      color: #D62C27
+      &::after
+        height: 2px
+    &.active
+      cursor: default
+      pointer-events: none      
+      color: #D62C27
+      &::after
+        height: 2px
+  &__content
+    opacity: 0
+    visibility: hidden
+    height: 0
+    overflow: hidden
+    transition: 0.3s
+    transform:  translateY(50px)
+    z-index: -1
+    &.active
+      visibility: visible
+      opacity: 1
+      overflow: visible
+      height: auto
+      transform: none
+      z-index: 1
+    
+.abs-services-tabs
+  .abs-tabs__switches
+    max-width: 902px
+    margin: 0 auto
+    +rmin($xl)
+      white-space: nowrap
+    +r($xl)
+      max-width: 100%
+  .abs-tabs__switch
+    +r($md)
+      width: 33.3333%
+      flex: 0 1 auto
+      margin-bottom: 28px
+      &:nth-child(4)
+        width: 50%
+      &:nth-child(5)
+        width: 50%
+
+.abs-tabs
+
+
+
+.services-scheme
+  counter-reset: section
+  &__row
+    display: flex
+    padding-bottom: 130px
+    position: relative
+    +r($md)
+      flex-direction: column
+    +r($md)
+      padding-bottom: 20px
+    &::after
+      content: ""
+      width: 16px
+      height: 81px
+      background-image: url(../img/svg/scheme-arrow.svg)
+      background-repeat: no-repeat
+      position: absolute
+      left: 5px
+      top: calc(50% + 15px)
+      transform: translateY(-50%)
+      +r($md)
+        display: none
+    &:last-child
+      padding-bottom: 0
+      &:after
+        display: none
+  &__title
+    width: 33%
+    font-size: 24px
+    color: #26296B
+    font-weight: 700
+    padding-left: 52px
+    position: relative
+    +r($md)
+      width: 100%
+      text-align: center
+      padding-left: 0
+      padding-top: 50px
+      margin-bottom: 48px
+    &::before
+      content: counter(section)
+      counter-increment: section
+      position: absolute
+      left: 0
+      top: 4px
+      font-weight: 500
+      font-size: 19px
+      border: 2px solid #A1ABDA
+      display: block
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #a1abda
+      +r($md)
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+  &__items-box
+    flex: 1
+    display: flex
+    flex-wrap: wrap
+  &__item
+    color: #404040
+    &-link
+      color: inherit
+      transition: 0.3s
+      &:hover, &:focus
+        text-decoration: none
+        color: #d62c27
+    &-title
+      font-size: 18px
+      font-weight: 700
+      padding-bottom: 
+      border-bottom: 2px solid currentColor
+      display: inline
+    &-text
+      font-size: 18px
+      line-height: 1.8
+      font-weight: 300
+      padding-top: 10px
+    &:nth-child(3n + 1)
+      padding-right: 90px
+      width: 38%
+    &:nth-child(3n +2)
+      padding-right: 10px
+      width: 25.5%
+    &:nth-child(3)
+      width: 36.5%
+    +r($xl)
+      &:nth-child(n)
+        width: 50%
+        margin-bottom: 26px
+        padding-right: 25px
+        &:last-child
+          margin-bottom: 0
+    &_disabled
+      color: #b4b4b4
+      .services-scheme__item-title
+        border-bottom: none
+      
+
+.s-abs-services
+  background: #F1F1F1
+  &__title
+    max-width: 650px
+    margin-left: auto
+    margin-right: auto
+
+.s-abs-calc
+  &__title
+    max-width: 600px
+    margin-left: auto
+    margin-right: auto
+
+
+.abs-calc-tabs
+  &__switches-container 
+    display: flex
+    align-items: center
+  &__title
+    padding-right: 50px
+    width: 34.2%
+    text-align: left
+    font-size: 18px
+    font-weight: 700
+    &_switches
+      padding-bottom: 90px
+    +r($xl)
+      padding-right: 10px
+      width: 42%
+      &_switches
+        display: none
+    +r($sm)
+      width: 100%
+      text-align: center
+      margin-bottom: 40px
+      &_check
+        width: 55%
+        text-align: left
+        margin-bottom: 0
+  &__switches
+    flex: 1
+  &__row
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    +r($xl)
+      margin-bottom: 69px
+    +r($sm)
+      flex-wrap: wrap
+      margin-bottom: 55px
+  &__value 
+    flex: 1
+
+  &__calc-btn-wrap
+    text-align: center
+    padding-top: 80px
+    +r($xl)
+      padding-top: 0
+  &__input
+    border: 1px solid #B4B4B4
+    padding: 11px 16px
+    width: 370px
+    max-width: 100%
+    border-radius: 0
+    background-color: transparent
+    box-shadow: none
+    &::placeholder
+      color: #B4B4B4
+    +r($xl)
+      width: 300px
+    +r($sm)
+      width: 100%
+    &:focus
+      border-color: #d62c27
+
+.abs-calc-tabs
+  +r($sm)
+    .abs-calc-tabs__switches 
+      flex-wrap: wrap
+    .abs-tabs__switch
+      width: 50%
+      margin-bottom: 28px
+      flex: 0 1 auto
+
+
+.abs-checkbox
+  cursor: pointer
+  position: relative
+  user-select: none
+  &__input
+    top: 5px
+    left: 5px
+    border-radius: 0
+    background-color: transparent    
+    box-shadow: none
+    &:checked + .abs-checkbox__content:before
+      background-image: url(../img/svg/checkbox-checked.svg)
+      border: none
+  &__content
+    padding-left: 50px
+    min-height: 23px
+    display: inline-block
+    position: relative  
+    vertical-align: middle
+    font-size: 16px
+    font-weight: 300
+    color: #404040
+    line-height: 1.8
+    a
+      color: inherit
+      text-decoration: underline
+      &:hover, &:focus
+        opacity: 0.8
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 2px
+      width: 23px
+      height: 23px
+      background-image: url(/img/checkbox.svg)
+      background-repeat: no-repeat
+      background-size: contain

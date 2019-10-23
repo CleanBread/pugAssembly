@@ -1,0 +1,51 @@
+
+.s-abs-callback
+  +bg
+  background-attachment: fixed
+  color: #ffffff
+  &__title
+    color: #ffffff
+    margin-bottom: 40px
+  &__descr
+    max-width: 450px
+    margin-left: auto
+    margin-right: auto
+
+.abs-callback-form
+  
+  &__fields-row
+    display: flex
+    margin-right: -30px
+    +r($lg)
+      flex-direction: column
+      max-width: 360px
+      margin: 0 auto
+  &__field
+    flex: 1
+    margin-right: 30px
+    +r($lg)
+      margin-right: 0
+      margin-bottom: 15px
+  &__input
+    width: 100%
+    background: transparent
+    border: none
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px
+    font-size: 18px
+    color: #ffffff
+    &:focus
+      border-bottom-color: #ffffff
+    &::placeholder
+      color: rgba(255, 255, 255, 0.7)
+  &__agree
+    padding: 78px 0 43px
+    max-width: 481px
+    margin: 0 auto
+    +r($lg)
+      max-width: 360px
+      padding: 50px 0 40px
+    +r($md)
+      padding: 30px 0 40px
+  &__btn-wrap
+    text-align: center

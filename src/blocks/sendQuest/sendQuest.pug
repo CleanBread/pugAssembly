@@ -1,0 +1,34 @@
+mixin sendQuest()
+    <div class="s-abs-callback s-abs" style="background-image: url(img/jpg-png/callback-bg.jpg)">
+        <div class="s-abs-callback__container container">
+            <div class="s-abs-callback__title abs-title">Есть вопросы? </div>
+            <div class="s-abs-callback__descr abs-section-descr">Оставьте заявку — наш специалист перезвонит в течение 10 минут
+            </div>
+            
+            <div class="s-abs-callback__form">
+                <form class="abs-callback-form">
+                    <div class="abs-callback-form__fields-row">
+                        <div class="abs-callback-form__field">
+                            <input placeholder="Имя" name="Имя" type="text" class="abs-callback-form__input" required>
+                        </div>
+                        <div class="abs-callback-form__field">
+                            <input placeholder="Телефон" name="Телефон" type="tel" class="abs-callback-form__input" required>
+                        </div>
+                        <div class="abs-callback-form__field">
+                            <input placeholder="E-mail" name="E-mail" type="email" class="abs-callback-form__input" required>
+                        </div>
+                    </div>
+                    <div class="abs-callback-form__agree">
+                        <label class="abs-checkbox-white">
+                            <input type="checkbox" class="abs-checkbox-white__input visually-hidden" required checked>
+                            <span class="abs-checkbox-white__content">Нажимая на кнопку, вы даете согласие на обработку своих персональных  данных и соглашаетесь с политикой конфиденциальности
+                            </span>
+                        </label>
+                    </div>
+                    <div class="abs-callback-form__btn-wrap">
+                        <button class="abs-callback-form__btn abs-btn">Отправить</button>	
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
