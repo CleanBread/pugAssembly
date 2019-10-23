@@ -23,6 +23,7 @@ gulp.task('build:pug', () => {
 
 gulp.task('clean', function (cb) {
     rimraf('./build', cb)
+    gulp.start('build');
 });
 
 gulp.task('build:sass', () => {
@@ -71,13 +72,6 @@ gulp.task('build:resources', () => {
     })
       .pipe(gulp.dest('build'))
   });
-  gulp.task('build:libs', () => {
-      return gulp.src('src/js/lib/*.js', {
-        dot: true,
-        allowEmpty: true
-      })
-        .pipe(gulp.dest('build/js'))
-    });
 
 gulp.task('build', gulp.parallel(
     'build:pug',
@@ -89,9 +83,8 @@ gulp.task('build', gulp.parallel(
 gulp.task('watch', () => {
     gulp.watch('src/**/*.pug', gulp.series('build:pug'));
     gulp.watch('src/**/*.sass', gulp.series('build:sass'));
-    gulp.watch('src/**/*.js', gulp.series('build:js'));
+    gulp.watch('src/js/**/*.js', gulp.series('build:js'));
     gulp.watch(['src/resources/**/*', 'src/resources/**/.*'], gulp.series('build:resources'));
-    gulp.watch(['src/js/lib/*.js'], gulp.series('build:libs'));
     gulp.watch('build/**/*').on('change', browserSync.reload);
 });
 
