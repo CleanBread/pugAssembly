@@ -23,17 +23,16 @@ gulp.task('build:pug', () => {
 
 gulp.task('clean', function (cb) {
     rimraf('./build', cb)
-    gulp.start('build');
 });
 
 gulp.task('build:sass', () => {
     return gulp.src('src/' + syntax + '/*.' + syntax)
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('main.css'))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-	.pipe(gulp.dest('build/css'))
-	.pipe(browserSync.stream())
+    .pipe(autoprefixer(['last 15 versions']))
+    .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+    .pipe(gulp.dest('build/css'))
+    // .pipe(browserSync.stream())
 });
 ``
 gulp.task('build:js', () => {
@@ -72,20 +71,29 @@ gulp.task('build:resources', () => {
     })
       .pipe(gulp.dest('build'))
   });
+  gulp.task('build:libs', () => {
+      return gulp.src('src/js/lib/*.js', {
+        dot: true,
+        allowEmpty: true
+      })
+        .pipe(gulp.dest('build/js/lib'))
+    });
 
 gulp.task('build', gulp.parallel(
     'build:pug',
     'build:sass',
     'build:js',
     'build:resources',
+    'build:libs'
   ));
   
 gulp.task('watch', () => {
     gulp.watch('src/**/*.pug', gulp.series('build:pug'));
     gulp.watch('src/**/*.sass', gulp.series('build:sass'));
-    gulp.watch('src/js/**/*.js', gulp.series('build:js'));
+    gulp.watch('src/**/*.js', gulp.series('build:js'));
     gulp.watch(['src/resources/**/*', 'src/resources/**/.*'], gulp.series('build:resources'));
-    gulp.watch('build/**/*').on('change', browserSync.reload);
+    gulp.watch(['src/js/lib/*.js'], gulp.series('build:libs'));
+    gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series(
